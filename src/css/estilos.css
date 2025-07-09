@@ -1,0 +1,121 @@
+body {
+    font-family: "Bangers", system-ui;
+    max-width: 1280px;
+    margin: 0;
+}
+
+.carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.informacoes {
+    display: none;
+}
+
+.informacoes.ativa {
+    display: block;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.informacoes h1 {
+    text-shadow:  -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000; ;
+
+    padding-left: 50px;
+    font-family: "Bangers", system-ui;
+    font-size: 35px;
+    color: orange;
+    margin-bottom: 80px;
+    letter-spacing: 8px;
+}
+
+
+
+
+.informacoes .descricao {
+    text-shadow: -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;;
+    font-family: "Bangers", system-ui;
+    width: 49%;
+    font-size: 24px;
+    color: white;
+    line-height: 40px;
+    height: 300px;
+    overflow: auto;
+    padding-left: 50px;
+
+}
+
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoes-carrossel .botao {
+    background-color: yellow;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: black;
+}
+
+.botoes-carrossel .botao.selecionado {
+    background-color: orange;
+}
+
+.imagem {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+}
+
+.imagem.ativa {
+    display: block;
+    animation: mudarImagem 0.7s;
+}
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+main:after {
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(230, 143, 85, 1) 87%, rgba(87, 60, 26, 1) 100%);
+    z-index: -1;
+}
